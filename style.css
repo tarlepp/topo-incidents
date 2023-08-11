@@ -93,7 +93,7 @@ h2:hover {
         transform: rotate(-3deg);
     }
     50% {
-        transform: rotate(-3.5deg);
+        transform: rotate(-4deg);
     }
     100% {
         transform: rotate(-3deg);
@@ -108,13 +108,16 @@ h2:hover {
         transform: rotate(-3deg);
     }
     30% {
+        transform: rotate(-210deg);
+    }
+    40% {
+        transform: rotate(-10deg);
+    }
+    50% {
         transform: rotate(0deg);
     }
-    70% {
-        transform: rotate(2deg);
-    }
     100% {
-        transform: rotate(5deg);
+        transform: rotate(8deg);
     }
 }
 
