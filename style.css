@@ -31,7 +31,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+ul {
     background-color: yellowgreen;
     border: 4px solid yellow;
     border-radius: 24px;
@@ -62,14 +63,18 @@ h3 {
 
 h1,
 h2,
-h3 {
+h3,
+ul {
     transition: all ease-in-out 250ms;
     margin: 0;
 }
 
 ul {
-    padding: 0 0 0 40px;
+    padding: 10px 60px 10px 45px;
+    width: 1%;
+    animation: ul-animation 2500ms infinite;
 }
+
 ul li {
     text-align: left;
 }
@@ -129,5 +134,17 @@ h2:hover {
     }
     100% {
         transform: rotate(2deg);
+    }
+}
+
+@keyframes ul-animation {
+    0% {
+        transform: rotate(-2deg);
+    }
+    50% {
+        transform: rotate(1.5deg);
+    }
+    100% {
+        transform: rotate(-2deg);
     }
 }
