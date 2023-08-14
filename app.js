@@ -1,7 +1,10 @@
 async function init() {
     const data = await loadData();
 
-    updateCurrentStatus(data.pop());
+    updateCurrentStatus(data[data.length - 1]);
+    updateHistory(data);
+
+    console.log('init');
 }
 
 async function loadData() {
@@ -10,15 +13,29 @@ async function loadData() {
     return await response.json();
 }
 
-function updateCurrentStatus(currentStatus) {
+function updateCurrentStatus(latestIncident) {
     const days = dateFns.differenceInDays(
         new Date(),
-        dateFns.parse(currentStatus.date, 'Y-m-d')
+        dateFns.parse(latestIncident.date, 'Y-m-d')
     );
 
-    const element = document.getElementById('days');
+    document.getElementById('days').innerHTML = `${days}...`;
+}
 
-    element.innerHTML = `${days}...`;
+function updateHistory(incidents) {
+    const ulElement = document.getElementById('history');
+
+    ulElement.innerHTML = '';
+
+    incidents.map(incident => {
+        const liElement = document.createElement('li');
+
+        liElement.innerHTML = `<strong>${incident.date}</strong> - ${incident.message}`.trim()
+
+        ulElement.appendChild(liElement);
+    });
 }
 
 init();
+
+setInterval(() => init(), 900 * 1000);

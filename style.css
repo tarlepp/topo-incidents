@@ -59,6 +59,7 @@ h3 {
     padding: 20px 30px;
     font-size: 30px;
     animation: h3-animation 1500ms infinite;
+    display: inline-block;
 }
 
 h1,
@@ -71,7 +72,7 @@ ul {
 
 ul {
     padding: 10px 60px 10px 45px;
-    width: 1%;
+    width: auto;
     animation: ul-animation 2500ms infinite;
 }
 
