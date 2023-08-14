@@ -91,6 +91,7 @@ h2:hover {
 .history {
     display: inline-block;
     margin-left: 50px;
+    float: right;
 }
 
 .github-link {
