@@ -93,6 +93,14 @@ h2:hover {
     margin-left: 50px;
 }
 
+.github-link {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+}
+
 @keyframes h1-animation {
     0% {
         transform: rotate(-3deg);
