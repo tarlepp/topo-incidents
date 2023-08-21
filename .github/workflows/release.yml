@@ -20,9 +20,8 @@ jobs:
 
       - name: Fetch releases.atom
         run: |
-          wget https://github.com/tarlepp/topo-incidents/releases.atom > releases.atom
+          curl https://github.com/tarlepp/topo-incidents/releases.atom > releases.atom
           git config --global user.name "Tarmo Leppänen"
           git config --global user.email "tarlepp@users.noreply.github.com"
-          git add releases.atom
-          git commit -a -m "Updated releases.atom files content"
+          git commit -a -m "Updated releases.atom file content"
           git push origin HEAD:master
