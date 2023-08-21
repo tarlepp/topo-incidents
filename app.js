@@ -10,7 +10,7 @@ async function init() {
     const items = [...atomFeed.getElementsByTagName('entry')]
         .map(entry => ({
             message: t(entry, 'title').textContent,
-            date: t(entry, 'id').textContent.split('/').pop(),
+            date: dateFns.parse(t(entry, 'id').textContent.split('/').pop(), 'Y-m-d'),
         }))
         .reverse();
 
@@ -21,7 +21,7 @@ async function init() {
 function updateCurrentStatus(latestIncident) {
     const days = dateFns.differenceInDays(
         new Date(),
-        dateFns.parse(latestIncident.date, 'Y-m-d'),
+        latestIncident.date,
     );
 
     document.getElementById('days').innerHTML = `${days}...`;
@@ -35,7 +35,7 @@ function updateHistory(incidents) {
     incidents.map(incident => {
         const liElement = document.createElement('li');
 
-        liElement.innerHTML = `<strong>${incident.date}</strong> - ${incident.message}`.trim();
+        liElement.innerHTML = `<strong>${dateFns.format(incident.date, 'YYYY-MM-DD', {locale: 'fi'})}</strong> - ${incident.message}`.trim();
 
         ulElement.appendChild(liElement);
     });
