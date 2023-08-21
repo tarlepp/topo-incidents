@@ -1,4 +1,4 @@
-name: release
+name: Publish new release
 
 on:
   create:
@@ -18,7 +18,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
 
-      - name: Fetch releases.atom
+      - name: Fetch `releases.atom` and commit+push it
         run: |
           curl https://github.com/tarlepp/topo-incidents/releases.atom > releases.atom
           git config --global user.name "Tarmo Leppänen"
