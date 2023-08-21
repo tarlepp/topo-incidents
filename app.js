@@ -35,7 +35,7 @@ function updateHistory(incidents) {
     incidents.map(incident => {
         const liElement = document.createElement('li');
 
-        liElement.innerHTML = `<strong>${dateFns.format(incident.date, 'YYYY-MM-DD', {locale: 'fi'})}</strong> - ${incident.message}`.trim();
+        liElement.innerHTML = `<strong>${dateFns.format(incident.date, 'YYYY-MM-DD (dddd)', {locale: 'fi'})}</strong> - ${incident.message}`.trim();
 
         ulElement.appendChild(liElement);
     });
