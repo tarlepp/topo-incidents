@@ -10,7 +10,7 @@ async function init() {
     const items = [...atomFeed.getElementsByTagName('entry')]
         .map(entry => ({
             message: t(entry, 'title').textContent,
-            date: dateFns.parse(t(entry, 'id').textContent.split('/').pop(), 'Y-m-d'),
+            date: luxon.DateTime.fromISO(t(entry, 'id').textContent.split('/').pop(), 'Y-m-d'),
         }))
         .reverse();
 
@@ -19,12 +19,12 @@ async function init() {
 }
 
 function updateCurrentStatus(latestIncident) {
-    const days = dateFns.differenceInDays(
-        new Date(),
+    const days = luxon.Interval.fromDateTimes(
         latestIncident.date,
-    );
+        new Date(),
+    ).length('days');
 
-    document.getElementById('days').innerHTML = `${days}...`;
+    document.getElementById('days').innerHTML = `${Math.floor(days)}...`;
 }
 
 function updateHistory(incidents) {
@@ -35,7 +35,7 @@ function updateHistory(incidents) {
     incidents.map(incident => {
         const liElement = document.createElement('li');
 
-        liElement.innerHTML = `<strong>${dateFns.format(incident.date, 'YYYY-MM-DD (dddd)', {locale: 'fi'})}</strong> - ${incident.message}`.trim();
+        liElement.innerHTML = `<strong>${incident.date.toFormat('yyyy-MM-dd (cccc)')}</strong> - ${incident.message}`.trim();
 
         ulElement.appendChild(liElement);
     });
