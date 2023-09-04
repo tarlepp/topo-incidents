@@ -4,7 +4,18 @@
   <link type="text/html" rel="alternate" href="https://github.com/tarlepp/topo-incidents/releases"/>
   <link type="application/atom+xml" rel="self" href="https://github.com/tarlepp/topo-incidents/releases.atom"/>
   <title>Release notes from topo-incidents</title>
-  <updated>2023-08-29T20:22:45Z</updated>
+  <updated>2023-09-01T13:10:40Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/677151013/2023-09-04</id>
+    <updated>2023-09-04T06:48:50Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/tarlepp/topo-incidents/releases/tag/2023-09-04"/>
+    <title>Not done needed homework</title>
+    <content type="html">&lt;p&gt;&lt;strong&gt;Full Changelog&lt;/strong&gt;: &lt;a class=&quot;commit-link&quot; href=&quot;https://github.com/tarlepp/topo-incidents/compare/2023-09-01...2023-09-04&quot;&gt;&lt;tt&gt;2023-09-01...2023-09-04&lt;/tt&gt;&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>tarlepp</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/595561?s=60&amp;v=4"/>
+  </entry>
   <entry>
     <id>tag:github.com,2008:Repository/677151013/2023-09-01</id>
     <updated>2023-09-01T13:10:25Z</updated>
