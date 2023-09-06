@@ -12,7 +12,6 @@ https://tarlepp.github.io/topo-incidents/
 
 ## License
 
-
 [The MIT License (MIT)](LICENSE)
 
 Copyright © 2023 Tarmo Leppänen
