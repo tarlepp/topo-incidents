@@ -4,7 +4,18 @@
   <link type="text/html" rel="alternate" href="https://github.com/tarlepp/topo-incidents/releases"/>
   <link type="application/atom+xml" rel="self" href="https://github.com/tarlepp/topo-incidents/releases.atom"/>
   <title>Release notes from topo-incidents</title>
-  <updated>2023-09-06T12:24:22Z</updated>
+  <updated>2023-10-03T17:09:34Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/677151013/2023-10-11</id>
+    <updated>2023-10-11T12:05:43Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/tarlepp/topo-incidents/releases/tag/2023-10-11"/>
+    <title>Arrived late for lessons</title>
+    <content>No content.</content>
+    <author>
+      <name>tarlepp</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/595561?s=60&amp;v=4"/>
+  </entry>
   <entry>
     <id>tag:github.com,2008:Repository/677151013/2023-10-03</id>
     <updated>2023-10-03T17:09:23Z</updated>
